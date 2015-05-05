@@ -1,42 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf=8">
+  <meta charset="utf-8">
   <title>Mosi</title>
+  <link rel="shortcut icon" href="assets/favicon.png"/>
   <link rel="stylesheet" type="text/css" href="//cloud.typography.com/6875292/679168/css/fonts.css" />
   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+
   <!--[if lte IE 8]>
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
   <![endif]-->
   <!--[if gt IE 8]><!-->
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
   <!--<![endif]-->
+  
+  <!-- Place somewhere in the <head> of your document -->
+  <link rel="stylesheet" href="assets/flexslider.css" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <script src="assets/jquery.flexslider.js"></script>
+  <!-- Place in the <head>, after the three links -->
+  <script type="text/javascript" charset="utf-8">
+    $(window).load(function() {
+      $('.flexslider').flexslider({animation: "slide",slideshowSpeed: 2800,animation: "fade", pauseOnHover: true});
+    });
+  </script>
+  
   <style type="text/css">
     .logo {height: 75px; display:block; margin:auto; padding-top: 1em; padding-bottom: 2em;}
     .iphone {width: 320px; display:block; margin:auto;}
     .slogan {height: 73px; top: 45%; position: absolute;}
-    p {font-size: 17px;}
-    body {font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B'; font-weight: 400; font-style: normal;}
+    p {font-size: 16px;}
+    body p, a {font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B'; font-weight: 400; font-style: normal;}
     .center {text-align: center;}
-    footer p {font-size: 12px;line-height: 1.45;}
+    
+    footer p, a {font-size: 13px;line-height: 1.45; text-decoration: none; color: #000;}
+    @media screen and (max-width: 720px) {.slogan { margin-top: -48.7em;} }
   </style>
 </head>
 <body id="back" onload="return random()">
   <div class="pure-g">
     <div class="pure-u-1">  
-      <p>We want you to see money in a different way.</p>
+      <p style="padding-left: 20px;">We want you to see money in a different way.</p>
     </div>
     <div class="pure-u-1">  
-      <img class="logo" src="logo.svg">
+      <img class="logo" src="assets/logo.svg">
     </div>
     <div class="pure-u-1 pure-u-md-1-3">
     </div>
     <div class="pure-u-1 pure-u-md-1-3">
-      <img class="iphone pure-img" src="iphone1.svg">
+      <!-- Place somewhere in the <body> of your page -->
+      <div class="flexslider">
+        <ul class="slides">
+          <li>
+            <img class="iphone pure-img" src="assets/iphone1.svg">
+          </li>
+          <li>
+            <img class="iphone pure-img" src="assets/iphone2.svg">
+          </li>
+          <li>
+            <img class="iphone pure-img" src="assets/iphone3.svg">
+          </li>
+          <li>
+            <img class="iphone pure-img" src="assets/iphone4.svg">
+          </li>
+        </ul>
+      </div>
+      
       
     </div>
     <div class="pure-u-1 pure-u-md-1-3" style="position:relative;">
-      <img class="slogan" src="slogan.svg">
+      <img class="slogan" src="assets/slogan.svg">
       
     </div>
     <div class="pure-u-1">
@@ -60,10 +93,7 @@
       <p class="center">
       ©2015 Mosi, Inc.
       <br>
-        
-      <a href="#">Terms</a> •
-      <a href="#">Privacy</a> •
-      <a href="#">Contact</a>
+      <a href="https://twitter.com/_guerravicente">@_guerravicente</a>
       </p>
     </div>
   </div>
